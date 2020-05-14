@@ -17,6 +17,15 @@ jobs:
     
     - name: Test the Docker Image
       run: make test
+      
+    - name: Upload Test results
+      uses: actions/upload-artifact@v2
+      with:
+        # Artifact name
+        name: Docker Test Results
+        # A file, directory or wildcard pattern that describes what to upload
+        path: /home/runner/work/myKata/myKata/reports
+          
     
     - name: Build the Docker image
       run: make build
