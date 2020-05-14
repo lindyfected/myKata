@@ -2,7 +2,7 @@
 
 # Used for publishing docker images
 GIT_OWNER=ukaeufe
-GIT_REPOSITORY=myKata
+GIT_REPOSITORY=mykata
 
 # Get npm package information
 NAME := $(shell node --print --eval "require('./package.json').name.split('/').pop()")
