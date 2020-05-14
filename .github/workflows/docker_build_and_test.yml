@@ -2,7 +2,7 @@ name: DockerWorkflow
 
 on:
   push:
-    branches: [ develop ]
+    branches: [ develop feature/]
 
 jobs:
 
@@ -12,6 +12,10 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    
+    - name: Test the Docker Image
+      run: make test
+    
     - name: Build the Docker image
       run: make build
       
