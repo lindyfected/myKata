@@ -2,7 +2,7 @@ name: Docker Image CI
 
 on:
   push:
-    branches: [ develop feature/ ]
+    branches: [ develop ]
 
 jobs:
 
@@ -15,7 +15,7 @@ jobs:
     - name: Build the Docker image
       run: make build
       
-      run: make test
+
       
       
       
