@@ -30,6 +30,23 @@ jobs:
     - name: Build the Docker image
       run: make build
       
+       # Docker Login
+    - uses: azure/docker-login@v1 
+      with:
+        login-server: github.com
+        username: GITHUB_ACTOR
+        password: GITHUB_TOKEN
+
+    # Docker ls
+    - name: Docker Image ls
+      run:
+        docker image ls
+        
+        
+    # Docker publish
+    - name: Docker Publish
+      run:
+        make publish 
 
       
       
