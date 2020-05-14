@@ -33,7 +33,7 @@ jobs:
        # Docker Login
     - uses: azure/docker-login@v1 
       with:
-        login-server: github.com
+        login-server: docker.pkg.github.com
         username: GITHUB_ACTOR
         password: GITHUB_TOKEN
 
