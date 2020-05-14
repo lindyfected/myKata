@@ -2,7 +2,9 @@ name: DockerWorkflow
 
 on:
   push:
-    branches: [ develop feature/]
+    branches:
+      - develop
+      - feature/*
 
 jobs:
 
