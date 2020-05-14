@@ -34,8 +34,8 @@ jobs:
     - uses: azure/docker-login@v1 
       with:
         login-server: docker.pkg.github.com
-        username: GITHUB_ACTOR
-        password: GITHUB_TOKEN
+        username: ${{ github.actor }}
+        password: ${{ secrets.GITHUB_TOKEN }}
 
     # Docker ls
     - name: Docker Image ls
